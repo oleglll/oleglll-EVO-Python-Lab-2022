@@ -1,0 +1,9 @@
+def direction(facing, turn):
+    d = {'N': 1, 'NE': 2, 'E': 3, 'SE': 4, 'S': 5, 'SW': 6, 'W': 7, 'NW': 8}
+    c = (turn / 45 + d[facing]) % 8
+    if c == 0:
+        return facing
+    else:
+        for k, v in d.items():
+            if v == c:
+                return k
